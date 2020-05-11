@@ -5,13 +5,13 @@
  * @param {number} newColor
  * @return {number[][]}
  */
-var floodFill = function (image, sr, sc, newColor) {
+function floodFill(image, sr, sc, newColor) {
   if (image[sr][sc] === newColor) return image;
 
   fill(image, sr, sc, image[sr][sc], newColor);
 
   return image;
-};
+}
 
 function fill(image, sr, sc, color, newColor) {
   if (
