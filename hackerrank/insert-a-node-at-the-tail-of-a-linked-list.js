@@ -21,3 +21,5 @@ function insertNodeAtTail(head, data) {
     current_node = current_node.next;
   }
 }
+
+// https://www.hackerrank.com/challenges/insert-a-node-at-the-tail-of-a-linked-list
