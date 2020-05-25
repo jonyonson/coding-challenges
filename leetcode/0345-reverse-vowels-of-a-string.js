@@ -5,8 +5,8 @@
 var reverseVowels = function (s) {
   let arr = s.split('');
   let vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
+  if (arr.every((x) => !vowels.includes(x))) return s;
 
-  if (!vowels.includes(arr)) return arr.join('');
   let leftIndex = 0;
   let rightIndex = s.length - 1;
 
