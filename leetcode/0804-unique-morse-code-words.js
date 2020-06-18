@@ -3,7 +3,7 @@
  * @return {number}
  */
 var uniqueMorseRepresentations = function (words) {
-  const codes = [
+  const MORSE_CODE = [
     '.-',
     '-...',
     '-.-.',
@@ -32,15 +32,15 @@ var uniqueMorseRepresentations = function (words) {
     '--..',
   ];
 
-  let transformedWords = words.map((word) => {
-    return [...word]
-      .map((letter) => {
-        let index = letter.charCodeAt(0) - 97;
-        console.log(codes[index]);
-        return codes[index];
-      })
-      .join('');
+  let seen = new Set();
+
+  words.forEach((word) => {
+    let transformedWord = '';
+    for (const letter of word) {
+      transformedWord += MORSE_CODES[letter.charCodeAt(0) - 97];
+    }
+    seen.add(transfromedWord);
   });
 
-  return new Set(transformedWords).size;
+  return seen.size;
 };
