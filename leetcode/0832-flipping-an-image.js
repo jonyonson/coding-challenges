@@ -11,4 +11,5 @@
 //   );
 // };
 
-const flipAndInvertImage = (A) => A.map((row) => row.reverse().map((x) => 1));
+const flipAndInvertImage = (A) =>
+  A.map((row) => row.reverse().map((x) => x ^ 1));
