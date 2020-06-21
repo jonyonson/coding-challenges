@@ -1,15 +1,15 @@
 /**
- * @param {string} S
+ * @param {string} str
  * @return {string}
  */
-var removeDuplicates = function (S) {
+const removeDuplicates = function (str) {
   let stack = [];
 
-  for (let i = 0; i < S.length; i++) {
-    if (S[i] === stack[stack.length - 1]) {
+  for (const letter of str) {
+    if (stack[stack.length - 1] === letter) {
       stack.pop();
     } else {
-      stack.push(S[i]);
+      stack.push(letter);
     }
   }
 
