@@ -3,7 +3,7 @@ function squareDigitsSequence(a0) {
   let curr = a0;
   while (!count[curr]) {
     count[curr] = true;
-    a = [...curr.toString()].reduce((acc, cv) => acc + +(cv ** 2), 0);
+    curr = [...curr.toString()].reduce((acc, cv) => acc + +(cv ** 2), 0);
   }
 
   return Object.keys(count).length + 1;
